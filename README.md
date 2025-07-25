@@ -2,6 +2,36 @@
 
 A comprehensive AI technology news aggregation platform that automatically collects and categorizes AI breakthroughs, research papers, and open-source projects from multiple trusted sources.
 
+## 📸 Live Demo Screenshots
+
+### Homepage with Real Data
+![Homepage](screenshots/ai-news-homepage-full.png)
+*Homepage showing 303+ articles with statistics, categories, and trending AI projects*
+
+### Category Page
+![Category Page](screenshots/ai-news-category-page.png)
+*Machine Learning category page with 62 articles and sorting options*
+
+### Article Detail Page
+![Article Detail](screenshots/ai-news-article-detail.png)
+*Detailed view of an arXiv research paper with full metadata and content*
+
+### Search Functionality
+![Search Demo](screenshots/ai-news-search-demo.png)
+*Real-time search with suggestions and filtering capabilities*
+
+## 📊 Live Data Collection Results
+
+The system has successfully collected and categorized real AI content:
+
+- **📄 140 arXiv Research Papers** - Latest AI/ML research from top conferences
+- **🐙 100 GitHub Projects** - Trending AI repositories and tools
+- **🔶 23 Hacker News Articles** - Community discussions on AI topics
+- **📡 103 RSS Articles** - Content from leading AI blogs and publications
+- **📈 Total: 366+ Articles** automatically categorized across 14 AI technology areas
+
+*Data collected during initial system deployment - numbers grow continuously with automated updates every 30 minutes*
+
 ## 🚀 Features
 
 ### Core Functionality

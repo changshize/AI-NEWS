@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
-const Category = require('../models/Category');
 require('dotenv').config();
+
+// Import all models to ensure they are registered
+const Article = require('../models/Article');
+const Category = require('../models/Category');
+const User = require('../models/User');
 
 // Database connection
 const connectDB = async () => {
@@ -175,8 +179,7 @@ const createIndexes = async () => {
   try {
     console.log('Creating database indexes...');
 
-    // Article indexes
-    const Article = require('../models/Article');
+    // Article indexes (already imported at top)
     
     await Article.collection.createIndex({ publishedAt: -1 });
     await Article.collection.createIndex({ categories: 1 });
@@ -194,14 +197,9 @@ const createIndexes = async () => {
     await Category.collection.createIndex({ name: 1 }, { unique: true });
     await Category.collection.createIndex({ sortOrder: 1 });
 
-    // User indexes (if User model exists)
-    try {
-      const User = require('../models/User');
-      await User.collection.createIndex({ email: 1 }, { unique: true });
-      await User.collection.createIndex({ username: 1 }, { unique: true });
-    } catch (error) {
-      console.log('User model not found, skipping user indexes');
-    }
+    // User indexes (already imported at top)
+    await User.collection.createIndex({ email: 1 }, { unique: true });
+    await User.collection.createIndex({ username: 1 }, { unique: true });
 
     console.log('Database indexes created successfully');
 
