@@ -28,20 +28,20 @@ const initializeCategories = async () => {
     const categories = [
       {
         name: 'machine-learning',
-        displayName: 'Machine Learning',
-        description: 'General machine learning algorithms, techniques, and applications including supervised, unsupervised, and semi-supervised learning methods.',
+        displayName: '机器学习',
+        description: '机器学习算法、技术和应用，包括监督学习、无监督学习和半监督学习方法。',
         icon: '🤖',
         color: '#3B82F6',
-        keywords: ['machine learning', 'ml', 'supervised learning', 'unsupervised learning', 'classification', 'regression', 'clustering'],
+        keywords: ['machine learning', 'ml', 'supervised learning', 'unsupervised learning', 'classification', 'regression', 'clustering', '机器学习', '监督学习', '无监督学习'],
         sortOrder: 1
       },
       {
         name: 'deep-learning',
-        displayName: 'Deep Learning',
-        description: 'Neural networks, deep learning architectures, and frameworks including CNNs, RNNs, transformers, and more.',
+        displayName: '深度学习',
+        description: '神经网络、深度学习架构和框架，包括CNN、RNN、Transformer等。',
         icon: '🧠',
         color: '#8B5CF6',
-        keywords: ['deep learning', 'neural network', 'cnn', 'rnn', 'lstm', 'transformer', 'attention', 'tensorflow', 'pytorch'],
+        keywords: ['deep learning', 'neural network', 'cnn', 'rnn', 'lstm', 'transformer', 'attention', 'tensorflow', 'pytorch', '深度学习', '神经网络'],
         sortOrder: 2
       },
       {

@@ -23,14 +23,14 @@ const Header = () => {
   };
 
   const categories = [
-    { name: 'machine-learning', label: 'Machine Learning' },
-    { name: 'deep-learning', label: 'Deep Learning' },
-    { name: 'computer-vision', label: 'Computer Vision' },
-    { name: 'natural-language-processing', label: 'NLP' },
-    { name: 'robotics', label: 'Robotics' },
-    { name: 'ai-tools', label: 'AI Tools' },
-    { name: 'research-papers', label: 'Research' },
-    { name: 'open-source', label: 'Open Source' }
+    { name: 'machine-learning', label: '机器学习' },
+    { name: 'deep-learning', label: '深度学习' },
+    { name: 'computer-vision', label: '计算机视觉' },
+    { name: 'natural-language-processing', label: '自然语言处理' },
+    { name: 'robotics', label: '机器人技术' },
+    { name: 'ai-tools', label: 'AI工具' },
+    { name: 'research-papers', label: '研究论文' },
+    { name: 'open-source', label: '开源项目' }
   ];
 
   return (
@@ -52,11 +52,11 @@ const Header = () => {
           <div className="nav-links">
             <Link to="/" className="nav-link">
               <FiTrendingUp className="nav-icon" />
-              Trending
+              热门
             </Link>
             <div className="nav-dropdown">
               <button className="nav-link dropdown-trigger">
-                Categories
+                分类
                 <span className="dropdown-arrow">▼</span>
               </button>
               <div className="dropdown-menu">
@@ -73,7 +73,7 @@ const Header = () => {
             </div>
             <Link to="/favorites" className="nav-link">
               <FiHeart className="nav-icon" />
-              Favorites
+              收藏
             </Link>
           </div>
         </nav>

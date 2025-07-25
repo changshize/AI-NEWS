@@ -14,6 +14,7 @@ const userRoutes = require('./routes/users');
 
 // Import services
 const scheduler = require('./services/scheduler');
+const { localizeContent } = require('./middleware/contentLocalization');
 
 const app = express();
 
@@ -40,6 +41,9 @@ app.use(cors({
 // Body parsing middleware
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+
+// Content localization middleware
+app.use('/api/', localizeContent);
 
 // Database connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ai-news-aggregator', {
@@ -91,6 +95,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log('Chinese localization enabled');
 });
 
 module.exports = app;

@@ -1,32 +1,42 @@
 class Categorizer {
   constructor() {
-    // Define category keywords and patterns
+    // Define category keywords and patterns (支持中英文关键词)
     this.categoryKeywords = {
       'machine-learning': [
         'machine learning', 'ml', 'supervised learning', 'unsupervised learning',
         'classification', 'regression', 'clustering', 'feature engineering',
-        'model training', 'prediction', 'algorithm', 'scikit-learn', 'sklearn'
+        'model training', 'prediction', 'algorithm', 'scikit-learn', 'sklearn',
+        '机器学习', '监督学习', '无监督学习', '分类', '回归', '聚类', '特征工程',
+        '模型训练', '预测', '算法', '机器学习算法'
       ],
       'deep-learning': [
         'deep learning', 'neural network', 'cnn', 'rnn', 'lstm', 'gru',
         'transformer', 'attention', 'backpropagation', 'gradient descent',
-        'tensorflow', 'pytorch', 'keras', 'neural', 'layers', 'weights'
+        'tensorflow', 'pytorch', 'keras', 'neural', 'layers', 'weights',
+        '深度学习', '神经网络', '卷积神经网络', '循环神经网络', '长短期记忆',
+        '变换器', '注意力机制', '反向传播', '梯度下降', '神经元', '权重'
       ],
       'computer-vision': [
         'computer vision', 'cv', 'image recognition', 'object detection',
         'image classification', 'face recognition', 'opencv', 'yolo',
-        'image processing', 'convolutional', 'segmentation', 'detection'
+        'image processing', 'convolutional', 'segmentation', 'detection',
+        '计算机视觉', '图像识别', '目标检测', '图像分类', '人脸识别',
+        '图像处理', '卷积', '图像分割', '物体检测', '视觉识别'
       ],
       'natural-language-processing': [
         'natural language processing', 'nlp', 'text processing', 'sentiment analysis',
         'language model', 'bert', 'gpt', 'transformer', 'tokenization',
         'text classification', 'named entity recognition', 'ner', 'chatbot',
-        'language understanding', 'text generation', 'llm', 'large language model'
+        'language understanding', 'text generation', 'llm', 'large language model',
+        '自然语言处理', '文本处理', '情感分析', '语言模型', '文本分类',
+        '命名实体识别', '聊天机器人', '语言理解', '文本生成', '大语言模型'
       ],
       'robotics': [
         'robotics', 'robot', 'autonomous', 'navigation', 'manipulation',
         'robot learning', 'robotic', 'automation', 'control systems',
-        'path planning', 'slam', 'ros', 'robot operating system'
+        'path planning', 'slam', 'ros', 'robot operating system',
+        '机器人', '机器人技术', '自主导航', '机械臂', '机器人学习',
+        '自动化', '控制系统', '路径规划', '机器人操作系统'
       ],
       'reinforcement-learning': [
         'reinforcement learning', 'rl', 'q-learning', 'policy gradient',
@@ -117,38 +127,38 @@ class Categorizer {
   getCategoryInfo(categoryName) {
     const categoryInfo = {
       'machine-learning': {
-        displayName: 'Machine Learning',
-        description: 'General machine learning algorithms, techniques, and applications',
+        displayName: '机器学习',
+        description: '机器学习算法、技术和应用，包括监督学习、无监督学习等',
         icon: '🤖',
         color: '#3B82F6'
       },
       'deep-learning': {
-        displayName: 'Deep Learning',
-        description: 'Neural networks, deep learning architectures, and frameworks',
+        displayName: '深度学习',
+        description: '神经网络、深度学习架构和框架，包括CNN、RNN、Transformer等',
         icon: '🧠',
         color: '#8B5CF6'
       },
       'computer-vision': {
-        displayName: 'Computer Vision',
-        description: 'Image processing, object detection, and visual recognition',
+        displayName: '计算机视觉',
+        description: '图像处理、目标检测和视觉识别技术',
         icon: '👁️',
         color: '#10B981'
       },
       'natural-language-processing': {
-        displayName: 'Natural Language Processing',
-        description: 'Text processing, language models, and conversational AI',
+        displayName: '自然语言处理',
+        description: '文本处理、语言模型和对话AI技术',
         icon: '💬',
         color: '#F59E0B'
       },
       'robotics': {
-        displayName: 'Robotics',
-        description: 'Robotic systems, automation, and autonomous agents',
+        displayName: '机器人技术',
+        description: '机器人系统、自动化和自主智能体',
         icon: '🤖',
         color: '#EF4444'
       },
       'reinforcement-learning': {
-        displayName: 'Reinforcement Learning',
-        description: 'Agent-based learning, reward systems, and decision making',
+        displayName: '强化学习',
+        description: '基于智能体的学习、奖励系统和决策制定',
         icon: '🎯',
         color: '#06B6D4'
       },

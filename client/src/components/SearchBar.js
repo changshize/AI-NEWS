@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import api from '../services/api';
 import './SearchBar.css';
 
-const SearchBar = ({ onSearch, autoFocus = false, placeholder = "Search AI news..." }) => {
+const SearchBar = ({ onSearch, autoFocus = false, placeholder = "搜索AI资讯..." }) => {
   const [query, setQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const inputRef = useRef(null);
@@ -91,6 +91,19 @@ const SearchBar = ({ onSearch, autoFocus = false, placeholder = "Search AI news.
     }
   };
 
+  const getSuggestionTypeText = (type) => {
+    switch (type) {
+      case 'title':
+        return '标题';
+      case 'tag':
+        return '标签';
+      case 'category':
+        return '分类';
+      default:
+        return '搜索';
+    }
+  };
+
   return (
     <div className="search-bar">
       <form onSubmit={handleSubmit} className="search-form">
@@ -132,7 +145,7 @@ const SearchBar = ({ onSearch, autoFocus = false, placeholder = "Search AI news.
                 {getSuggestionIcon(suggestion.type)}
               </span>
               <span className="suggestion-text">{suggestion.text}</span>
-              <span className="suggestion-type">{suggestion.type}</span>
+              <span className="suggestion-type">{getSuggestionTypeText(suggestion.type)}</span>
             </button>
           ))}
         </div>
