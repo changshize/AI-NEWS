@@ -20,6 +20,10 @@ A comprehensive AI technology news aggregation platform that automatically colle
 ![Search Demo](screenshots/ai-news-search-demo.png)
 *Real-time search with suggestions and filtering capabilities*
 
+### Mobile Responsive Design
+![Mobile View](screenshots/ai-news-mobile-homepage.png)
+*Fully responsive design optimized for mobile devices*
+
 ## 📊 Live Data Collection Results
 
 The system has successfully collected and categorized real AI content:
