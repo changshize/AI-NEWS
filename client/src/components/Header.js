@@ -41,8 +41,8 @@ const Header = () => {
           <Link to="/" className="brand-link">
             <div className="brand-icon">🤖</div>
             <div className="brand-text">
-              <h1 className="brand-title">AI Tech News</h1>
-              <p className="brand-subtitle">Latest AI Technology Updates</p>
+              <h1 className="brand-title">AI科技资讯</h1>
+              <p className="brand-subtitle">最新人工智能技术动态</p>
             </div>
           </Link>
         </div>
