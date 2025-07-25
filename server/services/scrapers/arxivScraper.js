@@ -2,6 +2,7 @@ const axios = require('axios');
 const xml2js = require('xml2js');
 const Article = require('../../models/Article');
 const categorizer = require('../categorizer');
+const contentTranslator = require('../contentTranslator');
 
 class ArxivScraper {
   constructor() {
@@ -208,7 +209,10 @@ class ArxivScraper {
   async saveArticles(articles) {
     for (const articleData of articles) {
       try {
-        const article = new Article(articleData);
+        // 处理中文内容
+        const processedArticle = contentTranslator.processArticleContent(articleData);
+
+        const article = new Article(processedArticle);
         await article.save();
       } catch (error) {
         if (error.code === 11000) {

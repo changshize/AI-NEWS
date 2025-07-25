@@ -21,6 +21,7 @@ const NewsCard = ({ article, showFavoriteButton = true }) => {
   } = article;
 
   const formatDate = (date) => {
+    moment.locale('zh-cn');
     return moment(date).fromNow();
   };
 
@@ -82,8 +83,8 @@ const NewsCard = ({ article, showFavoriteButton = true }) => {
         {/* Header */}
         <div className="news-card-header">
           <div className="source-info">
-            <span className="source-icon">{getSourceIcon(source.type)}</span>
-            <span className="source-name">{source.name}</span>
+            <span className="source-icon">{getSourceIcon(source?.type)}</span>
+            <span className="source-name">{source?.name || '未知来源'}</span>
             <span className="publish-date">
               <FiClock className="icon" />
               {formatDate(publishedAt)}
@@ -109,23 +110,23 @@ const NewsCard = ({ article, showFavoriteButton = true }) => {
         </h3>
 
         {/* Description */}
-        {description && (
+        {(article.chineseSummary || description) && (
           <p className="news-card-description">
-            {description}
+            {article.chineseSummary || description}
           </p>
         )}
 
         {/* Categories */}
         {categories.length > 0 && (
           <div className="categories">
-            {categories.slice(0, 3).map((category) => (
+            {categories.slice(0, 3).map((category, index) => (
               <Link
                 key={category}
                 to={`/category/${category}`}
                 className="category-tag"
                 style={{ backgroundColor: getCategoryColor(category) }}
               >
-                {category.replace(/-/g, ' ')}
+                {article.chineseCategories?.[index] || category.replace(/-/g, ' ')}
               </Link>
             ))}
           </div>
@@ -161,7 +162,7 @@ const NewsCard = ({ article, showFavoriteButton = true }) => {
             {metadata.readingTime && (
               <span className="reading-time">
                 <FiClock className="icon" />
-                {metadata.readingTime} min read
+                {metadata.readingTime} 分钟阅读
               </span>
             )}
 

@@ -99,11 +99,10 @@ const Home = () => {
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title">
-              Stay Updated with the Latest AI Technology News
+              获取最新AI技术资讯
             </h1>
             <p className="hero-description">
-              Discover cutting-edge AI research, open-source projects, and industry breakthroughs 
-              from top sources including GitHub, arXiv, Reddit, and leading tech blogs.
+              发现前沿AI研究、开源项目和行业突破，汇聚GitHub、arXiv、Reddit等顶级资源。
             </p>
             
             {/* Stats */}
@@ -111,15 +110,15 @@ const Home = () => {
               <div className="hero-stats">
                 <div className="stat-item">
                   <span className="stat-number">{statsData.overview?.totalArticles || 0}</span>
-                  <span className="stat-label">Total Articles</span>
+                  <span className="stat-label">总文章数</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-number">{statsData.overview?.todayArticles || 0}</span>
-                  <span className="stat-label">Today</span>
+                  <span className="stat-label">今日新增</span>
                 </div>
                 <div className="stat-item">
                   <span className="stat-number">{statsData.overview?.weekArticles || 0}</span>
-                  <span className="stat-label">This Week</span>
+                  <span className="stat-label">本周新增</span>
                 </div>
               </div>
             )}
@@ -131,7 +130,7 @@ const Home = () => {
       {categoriesData?.categories && (
         <section className="categories-section">
           <div className="container">
-            <h2 className="section-title">Browse by Category</h2>
+            <h2 className="section-title">按分类浏览</h2>
             <div className="categories-grid">
               {categoriesData.categories.slice(0, 8).map((category) => (
                 <Link
@@ -141,7 +140,7 @@ const Home = () => {
                 >
                   <div className="category-icon">{category.icon || '📁'}</div>
                   <h3 className="category-name">{category.displayName}</h3>
-                  <p className="category-count">{category.articleCount || 0} articles</p>
+                  <p className="category-count">{category.articleCount || 0} 篇文章</p>
                 </Link>
               ))}
             </div>
@@ -160,21 +159,21 @@ const Home = () => {
                 onClick={() => setActiveTab('trending')}
               >
                 <FiTrendingUp className="tab-icon" />
-                Trending
+                热门
               </button>
               <button
                 className={`tab-button ${activeTab === 'recent' ? 'active' : ''}`}
                 onClick={() => setActiveTab('recent')}
               >
                 <FiClock className="tab-icon" />
-                Recent
+                最新
               </button>
               <button
                 className={`tab-button ${activeTab === 'featured' ? 'active' : ''}`}
                 onClick={() => setActiveTab('featured')}
               >
                 <FiStar className="tab-icon" />
-                Featured
+                精选
               </button>
             </div>
 

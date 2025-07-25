@@ -1,40 +1,40 @@
-# AI Technology News Aggregation Website
+# AI科技资讯聚合网站
 
-A comprehensive AI technology news aggregation platform that automatically collects and categorizes AI breakthroughs, research papers, and open-source projects from multiple trusted sources.
+全面的AI技术资讯聚合平台，自动收集和分类来自多个可信来源的AI突破、研究论文和开源项目。专为中国用户优化，提供中文界面和智能内容翻译。
 
-## 📸 Live Demo Screenshots
+## 📸 实时演示截图
 
-### Homepage with Real Data
+### 中文化首页
 ![Homepage](screenshots/ai-news-homepage-full.png)
-*Homepage showing 303+ articles with statistics, categories, and trending AI projects*
+*中文界面首页，显示366+篇文章统计、分类和热门AI项目*
 
-### Category Page
+### 分类页面
 ![Category Page](screenshots/ai-news-category-page.png)
-*Machine Learning category page with 62 articles and sorting options*
+*机器学习分类页面，包含62篇文章和排序选项*
 
-### Article Detail Page
+### 文章详情页
 ![Article Detail](screenshots/ai-news-article-detail.png)
-*Detailed view of an arXiv research paper with full metadata and content*
+*arXiv研究论文详细视图，包含完整元数据和中文摘要*
 
-### Search Functionality
+### 搜索功能
 ![Search Demo](screenshots/ai-news-search-demo.png)
-*Real-time search with suggestions and filtering capabilities*
+*实时搜索，支持中文建议和智能过滤*
 
-### Mobile Responsive Design
+### 移动端响应式设计
 ![Mobile View](screenshots/ai-news-mobile-homepage.png)
-*Fully responsive design optimized for mobile devices*
+*完全响应式设计，针对移动设备优化*
 
-## 📊 Live Data Collection Results
+## 📊 实时数据收集成果
 
-The system has successfully collected and categorized real AI content:
+系统已成功收集并分类真实AI内容，全部提供中文摘要和翻译：
 
-- **📄 140 arXiv Research Papers** - Latest AI/ML research from top conferences
-- **🐙 100 GitHub Projects** - Trending AI repositories and tools
-- **🔶 23 Hacker News Articles** - Community discussions on AI topics
-- **📡 103 RSS Articles** - Content from leading AI blogs and publications
-- **📈 Total: 366+ Articles** automatically categorized across 14 AI technology areas
+- **📄 140篇 arXiv研究论文** - 来自顶级会议的最新AI/ML研究，自动生成中文摘要
+- **🐙 100个 GitHub项目** - 热门AI代码仓库和工具，智能分类和中文描述
+- **🔶 23篇 Hacker News文章** - AI话题社区讨论，关键内容中文提取
+- **📡 103篇 RSS文章** - 领先AI博客和出版物内容，技术术语中文翻译
+- **📈 总计: 366+篇文章** 自动分类到14个AI技术领域，全部支持中文检索
 
-*Data collected during initial system deployment - numbers grow continuously with automated updates every 30 minutes*
+*数据在系统初始部署期间收集 - 每30分钟自动更新，数量持续增长*
 
 ## 🚀 Features
 
